@@ -6,6 +6,19 @@
 //
 
 import func Foundation.sqrt
+import class GameplayKit.GKRandomSource
+import class GameplayKit.GKGaussianDistribution
+
+extension Double {
+    static func random() -> Double {
+        Double.random(in: 0.0 ... 1.0)
+    }
+
+    static var normalDistributionValue: Double {
+       let distribution = GKGaussianDistribution(randomSource: GKRandomSource(), mean: 0.0, deviation: 1.0)
+       return Double(distribution.nextInt())
+   }
+}
 
 extension [Double] {
     /// Математическое ожидание

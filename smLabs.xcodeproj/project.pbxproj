@@ -17,6 +17,7 @@
 		A732772F29956194005F3873 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772E29956194005F3873 /* Utils.swift */; };
 		A732773029956194005F3873 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772E29956194005F3873 /* Utils.swift */; };
 		A7BB7AC22993FA510030FF58 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB7AC12993FA510030FF58 /* main.swift */; };
+		A7E75A8E29C7A96D0094C609 /* CustomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E75A8D29C7A96D0094C609 /* CustomNumberGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 		A732772E29956194005F3873 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A7BB7ABE2993FA510030FF58 /* lab1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab1; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BB7AC12993FA510030FF58 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A7E75A8D29C7A96D0094C609 /* CustomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				A732771E29955940005F3873 /* main.swift */,
 				A732772329955B3C005F3873 /* UniformNumberGenerator.swift */,
+				A7E75A8D29C7A96D0094C609 /* CustomNumberGenerator.swift */,
 				A732772529955B82005F3873 /* BinomialNumberGenerator.swift */,
 				A732772729955BAB005F3873 /* GeometricNumberGenerator.swift */,
 				A732772929955BB6005F3873 /* PoissonNumberGenerator.swift */,
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A732772829955BAB005F3873 /* GeometricNumberGenerator.swift in Sources */,
+				A7E75A8E29C7A96D0094C609 /* CustomNumberGenerator.swift in Sources */,
 				A732772A29955BB6005F3873 /* PoissonNumberGenerator.swift in Sources */,
 				A732772629955B82005F3873 /* BinomialNumberGenerator.swift in Sources */,
 				A732773029956194005F3873 /* Utils.swift in Sources */,
