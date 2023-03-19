@@ -8,12 +8,12 @@
 import func Foundation.sqrt
 
 extension [Double] {
-    // мат ожидание
+    /// Математическое ожидание
     var expectedValue: Double {
         reduce(0, +) / Double(count)
     }
 
-    // дисперсия
+    /// Дисперсия случайной величины
     var variance: Double {
         let eV = expectedValue
         let sum = reduce(into: 0) { partialResult, elem in
@@ -22,8 +22,12 @@ extension [Double] {
         return sum / Double(count)
     }
 
-    // СКО
+    /// Среднеквадратичное отклонение
     var standartDeviation: Double {
         sqrt(variance)
+    }
+
+    var dCount: Double {
+        Double(count)
     }
 }

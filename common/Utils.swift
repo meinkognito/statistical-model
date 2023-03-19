@@ -7,24 +7,28 @@
 
 import Foundation
 
-// MARK: generate sequence of random elements
+// MARK: - generate sequence of random elements
 
-func generateSequence(of length: Int, l: Double, r: Double, with generator: inout RandomNumberGenerator) -> [Double] {
-    var res = [Double]()
-    res.reserveCapacity(length)
+func generateSequence(of length: Int, l: Double, r: Double, using generator: inout RandomNumberGenerator) -> [Double] {
+    var res = [Double](repeating: 0.0, count: length)
 
-    for _ in 0 ..< length {
-        res.append(Double.random(in: l ... r, using: &generator))
+    for i in 0 ..< length {
+        res[i] = Double.random(in: l ... r, using: &generator)
     }
 
     return res
 }
 
-// MARK: export sequence to file
+// MARK: - export sequence to file
 
-func writeToFile(_ sequence: [Double], title: String) {
+enum FileFormat: String {
+    case txt
+    case csv
+}
+
+func exportToFile(_ sequence: [Double], title: String, fileFormat: FileFormat = .txt) {
+    guard let filename = desktopDirectory?.appendingPathComponent("\(title).\(fileFormat.rawValue)") else { return }
     let str = sequence.description.trimmingCharacters(in: .punctuationCharacters)
-    let filename = desktopDirectory.appendingPathComponent("\(title).csv")
 
     do {
         try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
@@ -33,6 +37,6 @@ func writeToFile(_ sequence: [Double], title: String) {
     }
 }
 
-var desktopDirectory: URL {
-    FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)[0]
+var desktopDirectory: URL? {
+    FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first
 }
