@@ -5,6 +5,7 @@
 //  Created by denis.beloshitsky on 09.02.2023.
 //
 
+import func Foundation.pow
 import func Foundation.sqrt
 import class GameplayKit.GKRandomSource
 import class GameplayKit.GKGaussianDistribution
@@ -18,6 +19,11 @@ extension Double {
        let distribution = GKGaussianDistribution(randomSource: GKRandomSource(), mean: 0.0, deviation: 1.0)
        return Double(distribution.nextInt())
    }
+
+    func rounded(to places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
 }
 
 extension [Double] {
@@ -42,5 +48,11 @@ extension [Double] {
 
     var dCount: Double {
         Double(count)
+    }
+}
+
+extension [Int] {
+    var toDouble: [Double] {
+        self.map { Double($0) }
     }
 }
