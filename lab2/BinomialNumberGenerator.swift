@@ -8,7 +8,7 @@
 import Foundation
 
 class BinomialNumberGenerator: CustomNumberGenerator {
-    func generateSequence(of size: Int, params: Any...) -> [Int] {
+    static func generateSequence(of size: Int, params: Any...) -> [Int] {
         guard let N = params[0] as? Int,
               let p = params[1] as? Double
         else { return [] }
@@ -21,7 +21,7 @@ class BinomialNumberGenerator: CustomNumberGenerator {
         return res
     }
 
-    private func IRNBIN(_ N: Int, _ p: Double) -> Int {
+    private static func IRNBIN(_ N: Int, _ p: Double) -> Int {
         guard N < 100 else {
             return Int(round(RNNORM(N, p) + 0.5)) // аппроксимируем нормальным распределением
         }
@@ -40,19 +40,19 @@ class BinomialNumberGenerator: CustomNumberGenerator {
         return r
     }
 
-    private func RNNORM(_ N: Int, _ p: Double) -> Double {
+    private static func RNNORM(_ N: Int, _ p: Double) -> Double {
         expectedValue(N, p) + Double.normalDistributionValue * standartDeviation(N, p)
     }
 }
 
 private extension BinomialNumberGenerator {
     /// Математическое ожидание (теориетическое значение)
-     func expectedValue(_ N: Int, _ p: Double) -> Double {
+    static func expectedValue(_ N: Int, _ p: Double) -> Double {
         Double(N) * p
     }
 
     /// Среднеквадратичное отклонение (теориетическое значение)
-     func standartDeviation(_ N: Int, _ p: Double) -> Double {
+    static func standartDeviation(_ N: Int, _ p: Double) -> Double {
         sqrt(Double(N) * p * (1 - p))
     }
 }

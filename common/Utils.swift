@@ -26,6 +26,12 @@ enum FileFormat: String {
     case csv
 }
 
+/// convience method for exporting f and F simultaneously
+func exportToFile(f sequence1: [Double], F sequence2: [Double], title: String) {
+    exportToFile(sequence1, title: "f\(title)")
+    exportToFile(sequence2, title: "F\(title)")
+}
+
 func exportToFile(_ sequence: [Double], title: String, fileFormat: FileFormat = .txt) {
     guard let filename = desktopDirectory?.appendingPathComponent("\(title).\(fileFormat.rawValue)") else { return }
     let str = sequence.description.trimmingCharacters(in: .punctuationCharacters)

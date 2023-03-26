@@ -9,19 +9,54 @@ import Foundation
 
 let arraySize = 10000
 
+// uniform distribution
+let ILOW = 1
+let IUP = 100
+logInfo(about: UniformNumberGenerator.generateSequence(of: arraySize, params: ILOW, IUP),
+        title: "uniform")
+
+// binomial distribution
+let n = 10
+let p = 0.5
+logInfo(about: BinomialNumberGenerator.generateSequence(of: arraySize, params: n, p),
+        title: "binomial")
+
+// geometric distribution
+logInfo(about: GeometricNumberGenerator.generateSequence(of: arraySize, params: p, IRNGEO._1),
+        title: "geometric_IRNGEO_1")
+logInfo(about: GeometricNumberGenerator.generateSequence(of: arraySize, params: p, IRNGEO._2),
+        title: "geometric_IRNGEO_2")
+logInfo(about: GeometricNumberGenerator.generateSequence(of: arraySize, params: p, IRNGEO._3),
+        title: "geometric_IRNGEO_3")
+
+// Poisson distribution
+let mu = 10.0
+logInfo(about: PoissonNumberGenerator.generateSequence(of: arraySize, params: mu, IRNP.OI),
+        title: "poisson_IRNPOI")
+logInfo(about: PoissonNumberGenerator.generateSequence(of: arraySize, params: mu, IRNP.SN),
+        title: "poisson_IRNPSN")
 
 
-private func logInfo(about array: [Int]) {
-    // m and d
-    // f and F
+
+// MARK: - logging and calculating properties
+private func logInfo(about seq: [Int], title: String) {
+    let seqParams = [seq.toDouble.expectedValue, seq.toDouble.variance]
+    exportToFile(seqParams, title: "params for \(title)")
+    exportToFile(f: f(seq), F: F(seq), title: " \(title)")
 }
 
-private func f(u: [Int]) -> [Double] {
-    foo(u, with: fClosure)
+private func f(_ u: [Int]) -> [Double] {
+    let closure: ([Double], Double, Double, Double) -> Double = { arr, x, xPrev, delta in
+        arr.filter { $0 < x && $0 >= xPrev }.dCount / arr.dCount * delta
+    }
+    return foo(u, with: closure)
 }
 
-private func F(u: [Int]) -> [Double] {
-    foo(u, with: FClosure)
+private func F(_ u: [Int]) -> [Double] {
+    let closure: ([Double], Double, Double, Double) -> Double = { arr, x, _, _ in
+        arr.filter { $0 < x }.dCount / arr.dCount
+    }
+    return foo(u, with: closure)
 }
 
 private func foo(_ u: [Int], intervals: Int = 9, with myFunc: ([Double], Double, Double, Double) -> Double) -> [Double] {
@@ -41,12 +76,4 @@ private func foo(_ u: [Int], intervals: Int = 9, with myFunc: ([Double], Double,
     }
 
     return f
-}
-
-private let fClosure: ([Double], Double, Double, Double) -> Double = { arr, x, xPrev, delta in
-    arr.filter { $0 < x && $0 >= xPrev }.dCount / arr.dCount * delta
-}
-
-private let FClosure: ([Double], Double, Double, Double) -> Double = { arr, x, _, _ in
-    arr.filter { $0 < x }.dCount / arr.dCount
 }

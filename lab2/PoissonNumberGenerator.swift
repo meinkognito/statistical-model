@@ -8,16 +8,32 @@
 import Foundation
 
 class PoissonNumberGenerator: CustomNumberGenerator {
-    func generateSequence(of size: Int, params: Any...) -> [Int] {
+    static func generateSequence(of size: Int, params: Any...) -> [Int] {
         guard let mu = params[0] as? Double,
-              let gen = params[1] as? ((Double) -> Int) else { return [] }
+              let irnp = params[1] as? IRNP
+        else { return [] }
 
         var res = [Int](repeating: 0, count: size)
         for i in 0 ..< size {
-            res[i] = gen(mu)
+            res[i] = irnp.gen(mu)
         }
 
         return res
+    }
+}
+
+enum IRNP {
+    case OI
+    case SN
+
+    var gen: ((_ mu: Double) -> Int) {
+        switch self {
+        case .OI:
+            return IRNPOI
+        case .SN:
+            return IRNPSN
+
+        }
     }
 
     private func IRNPOI(_ mu: Double) -> Int {
@@ -26,15 +42,15 @@ class PoissonNumberGenerator: CustomNumberGenerator {
         }
 
         var P = exp(-mu)
-        var m = Double.random()
+        var M = Double.random()
 
         var r = 0
-        m -= P
+        M -= P
 
-        while (m >= 0) {
+        while (M >= 0) {
             r += 1
             P *= mu / Double(r)
-            m -= P
+            M -= P
         }
 
         return r
@@ -45,13 +61,13 @@ class PoissonNumberGenerator: CustomNumberGenerator {
             return Int(round(RNNORM(mu, mu) + 0.5))
         }
 
-        var e = exp(-mu)
-        var m = Double.random()
+        let e = exp(-mu)
+        var M = Double.random()
         var k = 0
 
-        while (m >= e) {
+        while (M >= e) {
             k += 1
-            m *= Double.random()
+            M *= Double.random()
         }
 
         return k

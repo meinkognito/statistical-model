@@ -8,7 +8,7 @@
 import Foundation
 
 class UniformNumberGenerator: CustomNumberGenerator {
-    func generateSequence(of size: Int, params: Any...) -> [Int] {
+    static func generateSequence(of size: Int, params: Any...) -> [Int] {
         guard let ILOW = params[0] as? Int,
               let IUP = params[1] as? Int
         else { return [] }
@@ -21,7 +21,7 @@ class UniformNumberGenerator: CustomNumberGenerator {
         return res
     }
 
-    private func IRNUNI(_ ILOW: Int, _ IUP: Int) -> Int {
+    private static func IRNUNI(_ ILOW: Int, _ IUP: Int) -> Int {
         Int(floor(Double(IUP - ILOW) * Double.random() + Double(ILOW)))
     }
 }

@@ -8,9 +8,10 @@
 import Foundation
 
 class GeometricNumberGenerator: CustomNumberGenerator {
-    func generateSequence(of size: Int, params: Any...) -> [Int] {
+    static func generateSequence(of size: Int, params: Any...) -> [Int] {
         guard let p = params[0] as? Double,
-              let irngeo = params[1] as? IRNGEO else { return [] }
+              let irngeo = params[1] as? IRNGEO
+        else { return [] }
 
         var res = [Int](repeating: 0, count: size)
         for i in 0 ..< size {
@@ -22,17 +23,17 @@ class GeometricNumberGenerator: CustomNumberGenerator {
 }
 
 enum IRNGEO {
-    case first
-    case second
-    case third
+    case _1
+    case _2
+    case _3
 
     var gen: ((_ p: Double) -> Int) {
         switch self {
-        case .first:
+        case ._1:
             return IRNGEO_1
-        case .second:
+        case ._2:
             return IRNGEO_2
-        case .third:
+        case ._3:
             return IRNGEO_3
         }
     }
@@ -64,8 +65,8 @@ enum IRNGEO {
     }
 
     private func IRNGEO_3(_ p: Double) -> Int {
-        var u = Double.random()
-        var q = 1 - p
+        let u = Double.random()
+        let q = 1 - p
 
         return Int(floor(log(u) / log(q)) + 1)
     }

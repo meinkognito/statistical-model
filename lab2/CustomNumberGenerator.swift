@@ -6,5 +6,5 @@
 //
 
 protocol CustomNumberGenerator {
-    func generateSequence(of size: Int, params: Any...) -> [Int]
+    static func generateSequence(of size: Int, params: Any...) -> [Int]
 }

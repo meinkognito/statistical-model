@@ -21,10 +21,8 @@ n.forEach { length in
     exportToFile(corrCoefficients, title: "cc for \(length)")
 
     let probablilityDensityResults = probablilityDensity(for: seq)
-    exportToFile(probablilityDensityResults, title: "f for \(length)")
-
     let integralDistributionResults = integralDistribution(for: seq)
-    exportToFile(integralDistributionResults, title: "F for \(length)")
+    exportToFile(f: probablilityDensityResults, F: integralDistributionResults, title: " for \(length)")
 }
 
 /// **Вычисление последовательности коэффициентов корреляции**
