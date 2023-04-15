@@ -5,8 +5,7 @@
 //  Created by denis.beloshitsky on 09.02.2023.
 //
 
-import func Foundation.pow
-import func Foundation.sqrt
+import Foundation
 import class GameplayKit.GKRandomSource
 import class GameplayKit.GKGaussianDistribution
 

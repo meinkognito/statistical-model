@@ -9,9 +9,11 @@ import Foundation
 
 final class ChiSquaredNumberGenerator: ContinuousDistributionNumberGenerator {
     static func generateSequence(of size: Int, params: Any...) -> [Double] {
+        guard let N = params.first as? Int else { return [] }
+
         var res = [Double](repeating: 0, count: size)
         for i in 0 ..< size {
-            res[i] = RNCHIS(size)
+            res[i] = RNCHIS(N)
         }
 
         return res
@@ -21,7 +23,8 @@ final class ChiSquaredNumberGenerator: ContinuousDistributionNumberGenerator {
         var Y = 0.0
 
         for _ in 0 ..< N {
-            Y += Double.random() * Double.random()
+            let u = Double.normalDistributionValue
+            Y += u * u
         }
 
         return Y
