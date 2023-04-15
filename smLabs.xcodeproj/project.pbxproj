@@ -16,12 +16,22 @@
 		A732772D29956105005F3873 /* Double+Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772B29955FF3005F3873 /* Double+Maths.swift */; };
 		A732772F29956194005F3873 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772E29956194005F3873 /* Utils.swift */; };
 		A732773029956194005F3873 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772E29956194005F3873 /* Utils.swift */; };
+		A763CCD929EAF64B004F5AEA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCD829EAF64B004F5AEA /* main.swift */; };
 		A7BB7AC22993FA510030FF58 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB7AC12993FA510030FF58 /* main.swift */; };
-		A7E75A8E29C7A96D0094C609 /* CustomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E75A8D29C7A96D0094C609 /* CustomNumberGenerator.swift */; };
+		A7E75A8E29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E75A8D29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A732771A29955940005F3873 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A763CCD429EAF64B004F5AEA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -50,13 +60,22 @@
 		A732772929955BB6005F3873 /* PoissonNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoissonNumberGenerator.swift; sourceTree = "<group>"; };
 		A732772B29955FF3005F3873 /* Double+Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Maths.swift"; sourceTree = "<group>"; };
 		A732772E29956194005F3873 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A763CCD629EAF64B004F5AEA /* lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab3; sourceTree = BUILT_PRODUCTS_DIR; };
+		A763CCD829EAF64B004F5AEA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A7BB7ABE2993FA510030FF58 /* lab1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab1; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BB7AC12993FA510030FF58 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		A7E75A8D29C7A96D0094C609 /* CustomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberGenerator.swift; sourceTree = "<group>"; };
+		A7E75A8D29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteDistributionNumberGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A732771929955940005F3873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A763CCD329EAF64B004F5AEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -95,12 +114,20 @@
 			isa = PBXGroup;
 			children = (
 				A732772329955B3C005F3873 /* UniformNumberGenerator.swift */,
-				A7E75A8D29C7A96D0094C609 /* CustomNumberGenerator.swift */,
+				A7E75A8D29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift */,
 				A732772529955B82005F3873 /* BinomialNumberGenerator.swift */,
 				A732772729955BAB005F3873 /* GeometricNumberGenerator.swift */,
 				A732772929955BB6005F3873 /* PoissonNumberGenerator.swift */,
 			);
 			path = DiscreteDistributionsKit;
+			sourceTree = "<group>";
+		};
+		A763CCD729EAF64B004F5AEA /* lab3 */ = {
+			isa = PBXGroup;
+			children = (
+				A763CCD829EAF64B004F5AEA /* main.swift */,
+			);
+			path = lab3;
 			sourceTree = "<group>";
 		};
 		A7BB7AB52993FA510030FF58 = {
@@ -109,6 +136,7 @@
 				A7327731299564A4005F3873 /* common */,
 				A7BB7AC02993FA510030FF58 /* lab1 */,
 				A732771D29955940005F3873 /* lab2 */,
+				A763CCD729EAF64B004F5AEA /* lab3 */,
 				A7BB7ABF2993FA510030FF58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +146,7 @@
 			children = (
 				A7BB7ABE2993FA510030FF58 /* lab1 */,
 				A732771C29955940005F3873 /* lab2 */,
+				A763CCD629EAF64B004F5AEA /* lab3 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +179,23 @@
 			productReference = A732771C29955940005F3873 /* lab2 */;
 			productType = "com.apple.product-type.tool";
 		};
+		A763CCD529EAF64B004F5AEA /* lab3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A763CCDA29EAF64B004F5AEA /* Build configuration list for PBXNativeTarget "lab3" */;
+			buildPhases = (
+				A763CCD229EAF64B004F5AEA /* Sources */,
+				A763CCD329EAF64B004F5AEA /* Frameworks */,
+				A763CCD429EAF64B004F5AEA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lab3;
+			productName = lab3;
+			productReference = A763CCD629EAF64B004F5AEA /* lab3 */;
+			productType = "com.apple.product-type.tool";
+		};
 		A7BB7ABD2993FA510030FF58 /* lab1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7BB7AC52993FA510030FF58 /* Build configuration list for PBXNativeTarget "lab1" */;
@@ -180,6 +226,9 @@
 					A732771B29955940005F3873 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					A763CCD529EAF64B004F5AEA = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					A7BB7ABD2993FA510030FF58 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -200,6 +249,7 @@
 			targets = (
 				A7BB7ABD2993FA510030FF58 /* lab1 */,
 				A732771B29955940005F3873 /* lab2 */,
+				A763CCD529EAF64B004F5AEA /* lab3 */,
 			);
 		};
 /* End PBXProject section */
@@ -210,13 +260,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A732772829955BAB005F3873 /* GeometricNumberGenerator.swift in Sources */,
-				A7E75A8E29C7A96D0094C609 /* CustomNumberGenerator.swift in Sources */,
+				A7E75A8E29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift in Sources */,
 				A732772A29955BB6005F3873 /* PoissonNumberGenerator.swift in Sources */,
 				A732772629955B82005F3873 /* BinomialNumberGenerator.swift in Sources */,
 				A732773029956194005F3873 /* Utils.swift in Sources */,
 				A732771F29955940005F3873 /* main.swift in Sources */,
 				A732772429955B3C005F3873 /* UniformNumberGenerator.swift in Sources */,
 				A732772C29955FF3005F3873 /* Double+Maths.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A763CCD229EAF64B004F5AEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A763CCD929EAF64B004F5AEA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +303,28 @@
 			name = Debug;
 		};
 		A732772229955940005F3873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L3Y55SM2AA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A763CCDB29EAF64B004F5AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L3Y55SM2AA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A763CCDC29EAF64B004F5AEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -398,6 +478,15 @@
 			buildConfigurations = (
 				A732772129955940005F3873 /* Debug */,
 				A732772229955940005F3873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A763CCDA29EAF64B004F5AEA /* Build configuration list for PBXNativeTarget "lab3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A763CCDB29EAF64B004F5AEA /* Debug */,
+				A763CCDC29EAF64B004F5AEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

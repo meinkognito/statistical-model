@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BinomialNumberGenerator: CustomNumberGenerator {
+class BinomialNumberGenerator: DiscreteDistributionNumberGenerator {
     static func generateSequence(of size: Int, params: Any...) -> [Int] {
         guard let N = params[0] as? Int,
               let p = params[1] as? Double
