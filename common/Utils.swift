@@ -26,6 +26,12 @@ enum FileFormat: String {
     case csv
 }
 
+func logInfo(about seq: [Double], isGaussianOrStudent: Bool = false, title: String) {
+    let seqParams = [seq.expectedValue, seq.variance]
+    exportToFile(seqParams, title: "params for \(title)")
+    exportToFile(f: f(seq, isGaussianOrStudent), F: F(seq, isGaussianOrStudent), title: " \(title)")
+}
+
 /// convience method for exporting f and F simultaneously
 func exportToFile(f sequence1: [Double], F sequence2: [Double], title: String) {
     exportToFile(sequence1, title: "f\(title)", fileFormat: .csv)

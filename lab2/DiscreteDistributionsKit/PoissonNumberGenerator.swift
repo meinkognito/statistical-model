@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PoissonNumberGenerator: DiscreteDistributionNumberGenerator {
+final class PoissonNumberGenerator: DiscreteDistributionNumberGenerator {
     static func generateSequence(of size: Int, params: Any...) -> [Int] {
         guard let mu = params[0] as? Double,
               let irnp = params[1] as? IRNP

@@ -17,6 +17,16 @@
 		A732772F29956194005F3873 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772E29956194005F3873 /* Utils.swift */; };
 		A732773029956194005F3873 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772E29956194005F3873 /* Utils.swift */; };
 		A763CCD929EAF64B004F5AEA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCD829EAF64B004F5AEA /* main.swift */; };
+		A763CCDE29EAF70C004F5AEA /* ContinuousDistributionNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCDD29EAF70C004F5AEA /* ContinuousDistributionNumberGenerator.swift */; };
+		A763CCE129EAF791004F5AEA /* UniformNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCE029EAF791004F5AEA /* UniformNumberGenerator.swift */; };
+		A763CCE229EAF7AD004F5AEA /* Double+Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772B29955FF3005F3873 /* Double+Maths.swift */; };
+		A763CCE329EAF7AD004F5AEA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732772E29956194005F3873 /* Utils.swift */; };
+		A763CCE529EAF8ED004F5AEA /* GaussianNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCE429EAF8ED004F5AEA /* GaussianNumberGenerator.swift */; };
+		A763CCE729EAFBA6004F5AEA /* ExponentialNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCE629EAFBA6004F5AEA /* ExponentialNumberGenerator.swift */; };
+		A763CCE929EAFC77004F5AEA /* ChiSquaredNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCE829EAFC77004F5AEA /* ChiSquaredNumberGenerator.swift */; };
+		A763CCEB29EAFD28004F5AEA /* StudentNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCEA29EAFD28004F5AEA /* StudentNumberGenerator.swift */; };
+		A763CCED29EB0122004F5AEA /* F+f.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCEC29EB0122004F5AEA /* F+f.swift */; };
+		A763CCEE29EB014E004F5AEA /* F+f.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763CCEC29EB0122004F5AEA /* F+f.swift */; };
 		A7BB7AC22993FA510030FF58 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB7AC12993FA510030FF58 /* main.swift */; };
 		A7E75A8E29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E75A8D29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +72,13 @@
 		A732772E29956194005F3873 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A763CCD629EAF64B004F5AEA /* lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab3; sourceTree = BUILT_PRODUCTS_DIR; };
 		A763CCD829EAF64B004F5AEA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A763CCDD29EAF70C004F5AEA /* ContinuousDistributionNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousDistributionNumberGenerator.swift; sourceTree = "<group>"; };
+		A763CCE029EAF791004F5AEA /* UniformNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniformNumberGenerator.swift; sourceTree = "<group>"; };
+		A763CCE429EAF8ED004F5AEA /* GaussianNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianNumberGenerator.swift; sourceTree = "<group>"; };
+		A763CCE629EAFBA6004F5AEA /* ExponentialNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialNumberGenerator.swift; sourceTree = "<group>"; };
+		A763CCE829EAFC77004F5AEA /* ChiSquaredNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiSquaredNumberGenerator.swift; sourceTree = "<group>"; };
+		A763CCEA29EAFD28004F5AEA /* StudentNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNumberGenerator.swift; sourceTree = "<group>"; };
+		A763CCEC29EB0122004F5AEA /* F+f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "F+f.swift"; sourceTree = "<group>"; };
 		A7BB7ABE2993FA510030FF58 /* lab1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab1; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BB7AC12993FA510030FF58 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A7E75A8D29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteDistributionNumberGenerator.swift; sourceTree = "<group>"; };
@@ -106,6 +123,7 @@
 			children = (
 				A732772B29955FF3005F3873 /* Double+Maths.swift */,
 				A732772E29956194005F3873 /* Utils.swift */,
+				A763CCEC29EB0122004F5AEA /* F+f.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -126,8 +144,22 @@
 			isa = PBXGroup;
 			children = (
 				A763CCD829EAF64B004F5AEA /* main.swift */,
+				A763CCDF29EAF72A004F5AEA /* ContinuousDistributionKit */,
 			);
 			path = lab3;
+			sourceTree = "<group>";
+		};
+		A763CCDF29EAF72A004F5AEA /* ContinuousDistributionKit */ = {
+			isa = PBXGroup;
+			children = (
+				A763CCDD29EAF70C004F5AEA /* ContinuousDistributionNumberGenerator.swift */,
+				A763CCE029EAF791004F5AEA /* UniformNumberGenerator.swift */,
+				A763CCE429EAF8ED004F5AEA /* GaussianNumberGenerator.swift */,
+				A763CCE629EAFBA6004F5AEA /* ExponentialNumberGenerator.swift */,
+				A763CCE829EAFC77004F5AEA /* ChiSquaredNumberGenerator.swift */,
+				A763CCEA29EAFD28004F5AEA /* StudentNumberGenerator.swift */,
+			);
+			path = ContinuousDistributionKit;
 			sourceTree = "<group>";
 		};
 		A7BB7AB52993FA510030FF58 = {
@@ -259,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A763CCEE29EB014E004F5AEA /* F+f.swift in Sources */,
 				A732772829955BAB005F3873 /* GeometricNumberGenerator.swift in Sources */,
 				A7E75A8E29C7A96D0094C609 /* DiscreteDistributionNumberGenerator.swift in Sources */,
 				A732772A29955BB6005F3873 /* PoissonNumberGenerator.swift in Sources */,
@@ -274,7 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A763CCE229EAF7AD004F5AEA /* Double+Maths.swift in Sources */,
+				A763CCE529EAF8ED004F5AEA /* GaussianNumberGenerator.swift in Sources */,
+				A763CCE329EAF7AD004F5AEA /* Utils.swift in Sources */,
+				A763CCE929EAFC77004F5AEA /* ChiSquaredNumberGenerator.swift in Sources */,
 				A763CCD929EAF64B004F5AEA /* main.swift in Sources */,
+				A763CCEB29EAFD28004F5AEA /* StudentNumberGenerator.swift in Sources */,
+				A763CCDE29EAF70C004F5AEA /* ContinuousDistributionNumberGenerator.swift in Sources */,
+				A763CCE729EAFBA6004F5AEA /* ExponentialNumberGenerator.swift in Sources */,
+				A763CCE129EAF791004F5AEA /* UniformNumberGenerator.swift in Sources */,
+				A763CCED29EB0122004F5AEA /* F+f.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

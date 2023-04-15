@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GeometricNumberGenerator: DiscreteDistributionNumberGenerator {
+final class GeometricNumberGenerator: DiscreteDistributionNumberGenerator {
     static func generateSequence(of size: Int, params: Any...) -> [Int] {
         guard let p = params[0] as? Double,
               let irngeo = params[1] as? IRNGEO

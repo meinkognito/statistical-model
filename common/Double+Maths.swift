@@ -29,7 +29,7 @@ extension Double {
 extension [Double] {
     /// Математическое ожидание
     var expectedValue: Double {
-        reduce(0, +) / Double(count)
+        reduce(0, +) / dCount
     }
 
     /// Дисперсия случайной величины
@@ -38,7 +38,7 @@ extension [Double] {
         let sum = reduce(into: 0) { partialResult, elem in
             partialResult += (elem - eV) * (elem - eV)
         }
-        return sum / Double(count)
+        return sum / dCount
     }
 
     /// Среднеквадратичное отклонение

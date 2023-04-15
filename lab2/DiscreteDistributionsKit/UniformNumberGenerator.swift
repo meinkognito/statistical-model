@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UniformNumberGenerator: DiscreteDistributionNumberGenerator {
+final class UniformNumberGenerator: DiscreteDistributionNumberGenerator {
     static func generateSequence(of size: Int, params: Any...) -> [Int] {
         guard let ILOW = params[0] as? Int,
               let IUP = params[1] as? Int
