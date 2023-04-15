@@ -28,8 +28,8 @@ enum FileFormat: String {
 
 /// convience method for exporting f and F simultaneously
 func exportToFile(f sequence1: [Double], F sequence2: [Double], title: String) {
-    exportToFile(sequence1, title: "f\(title)")
-    exportToFile(sequence2, title: "F\(title)")
+    exportToFile(sequence1, title: "f\(title)", fileFormat: .csv)
+    exportToFile(sequence2, title: "bigF\(title)", fileFormat: .csv)
 }
 
 func exportToFile(_ sequence: [Double], title: String, fileFormat: FileFormat = .txt) {

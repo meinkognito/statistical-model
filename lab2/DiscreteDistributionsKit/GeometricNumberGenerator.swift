@@ -44,7 +44,7 @@ enum IRNGEO {
         var r = 0
 
         while m >= 0 {
-            m -= p
+            m -= P
             P *= (1 - p)
             r += 1
         }

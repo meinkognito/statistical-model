@@ -32,7 +32,7 @@ class BinomialNumberGenerator: CustomNumberGenerator {
 
         M -= P
         while M >= 0 {
-            P *= Double((N - r) / (r + 1)) * (p / (1 - p))
+            P *= (Double(N - r) / Double(r + 1)) * (p / (1 - p))
             M -= P
             r += 1
         }
